@@ -85,9 +85,34 @@ else {
 
 // // Function for getting a random element from an array
 // you need to create an array of the characters you selected
-// function getRandom(arr) {
+function getRandom(arr) {
+  //using const = specifies thatthe varibale value cannot be changed once it has been assigned. allows you to only modify the value of the array but the reference to the array cannot be changed. 
 
-// }
+  // get random index value
+  const randomIndex = Math.floor(Math.random() * arr.length);
+
+  //get random item
+  const item = arr[randomIndex];
+  return item;
+ }
+
+// now create an array of the selected characters (for the diff options)
+
+var chosenCharacters = [];
+function createArray () {
+  if (upper) {
+    chosenCharacters = chosenCharacters.concat(upperCasedCharacters);
+  }
+  if (special) {
+    chosenCharacters = chosenCharacters.concat(specialCharacters);
+  }
+  if (lower) {
+    chosenCharacters = chosenCharacters.concat(lowerCasedCharacters);
+  }
+  if (numbers) {
+    chosenCharacters = chosenCharacters.concat(numericCharacters);
+  }
+}
 
 // // Function to generate password with user input
 // function generatePassword() {
