@@ -38,6 +38,7 @@ generateButton.addEventListener("click", function () {
 
 
 //Function to prompt for password input
+// // Function to prompt user for password options
 function getPasswordOptions () {
   // to clear array with each click of button
   numberCharacters = prompt ("Please select how many characters you want your password to have");
@@ -53,9 +54,9 @@ else if (numberCharacters < 10) {
   alert ("Password length must be at least 10 characters")
   getPasswordOptions()
 }
-  else if (numberCharacters > 65){
-alert("Password length must be no more than 64 characters")
-getPasswordOptions()
+else if (numberCharacters > 65){
+  alert("Password length must be no more than 64 characters")
+  getPasswordOptions()
 }
 // using confirm to display the message box with an ok and cancel button, automatically returns true if the user clicks ok otherwise returns false
 else { 
@@ -65,15 +66,22 @@ else {
     upper = confirm ("Do you want to include uppercase characters?")
     numbers = confirm ("Do you want to include numbers?")
     special = confirm ("Do you want to include special characters?")
+
+    //if statment for if no characater options selected
+    //! is a logical reversal operaotr, e.g. if the value is true it will turn it to false and if false turns it to true. 
+    // && (is a logical conjunction operator) for a set of boolean operands will be true if and only if all the operands are true. 
+    if (!numbers && !upper && !lower  && !special) {
+      alert("please choose at least one type of character for your password")
+      characterOptions()
+    }
   }
+  createArray ()
+  //return statement ends function execution and specifies a value to be returned to the function caller
+  //once you have gone through previosu functions alert box should disappear
+  return;
 }
 
 
-
-// // Function to prompt user for password options
-// function getPasswordOptions(prompt) {
-
-// }
 
 // // Function for getting a random element from an array
 // you need to create an array of the characters you selected
