@@ -112,30 +112,32 @@ function createArray () {
   if (numbers) {
     chosenCharacters = chosenCharacters.concat(numericCharacters);
   }
+  console.log(chosenCharacters)
 }
 
 // // Function to generate password with user input
-// function generatePassword() {
-
-// }
+ function generatePassword() {
+  var password = "";
+  //for loop, set variable before the loop starts (let i=0), then define condition for the loop to run, then increase the value i++ each time code block in loop is executed
+  for (var i=0; i < numberCharacters; i++) {
+    password = password + getRandom(chosenCharacters)};
+    return password
+  }
+  console.log(password)
 
 
 // //Generate the passwords based on the prompts
-// // Length of password
-// // At least 10 characters but no more than 64.
-
-// function getPrompts () {
-//   characterLength = prompt ("Choose Password Length (From 10 - 64 Characters");
-// }
+generatePassword ()
+//# because id= generate
+var generateBtn = document.querySelector('#generate');
 
 
 // // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector('#password');
-
-//   passwordText.value = password;
-// }
+function writePassword() {
+ var password = generatePassword();
+ var passwordText = document.querySelector('#password');
+ passwordText.value = password;
+ }
 
 // // Add event listener to generate button
 // generateBtn.addEventListener('click', writePassword);
