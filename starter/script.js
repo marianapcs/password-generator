@@ -49,11 +49,12 @@ if (isNaN(numberCharacters)){
 }
 //else if for conditional statements for each alert, tried to join both alerts into one
 //creating two else if statements because not working combined
-else if (numberCharacters <10) {
-  alert 
-  
-  else if (numberCharacters >65){
-alert("Password length must be at least 10 characters and no more than 64")
+else if (numberCharacters < 10) {
+  alert ("Password length must be at least 10 characters")
+  getPasswordOptions()
+}
+  else if (numberCharacters > 65){
+alert("Password length must be no more than 64 characters")
 getPasswordOptions()
 }
 // using confirm to display the message box with an ok and cancel button, automatically returns true if the user clicks ok otherwise returns false
