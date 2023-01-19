@@ -139,12 +139,12 @@ function writePassword() {
  passwordText.value = password;
  }
 
-// // Add event listener to generate button
-// generateBtn.addEventListener('click', writePassword);
+// Add event listener to generate button
+generateBtn.addEventListener('click', writePassword);
 
 
 
-
+//Instructions:
 // Generate a password when the button is clicked
 // Present a series of prompts for password criteria
 // Character types
